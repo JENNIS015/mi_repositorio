@@ -1,0 +1,60 @@
+@import "variables";
+$theme-colors: (
+    "primary":  $colorEspecial,
+    "dark":$colorAzul,
+);
+$link-decoration: none !default;
+
+$SpacesSizes: (
+  0: 0px,
+  10: 10px,
+  20:20px,
+  30:30px,
+);
+$PaddingsType: (
+  pa: padding,
+  pt: padding-top,
+  pr: padding-right,
+  pb: padding-bottom,
+  pl: padding-left
+);
+
+@each $classType, $type in $PaddingsType {
+  @each $classSize, $size in $SpacesSizes {
+    .#{$classType}-#{$classSize} {
+      #{$type}: #{$size};
+    }
+  }
+}
+
+@function isMultiple10($i){   
+  @return ($i % 10 == 0);   
+}
+@for $i from 5 through 100{  
+  @if(isMultiple10($i)){    
+      .espacio-#{$i}{        
+          height: 0px + $i; 
+      }
+  }
+}
+
+$colors: (
+	"text": #060713,
+  "importante": #12225d
+);
+
+@function color($search) {
+  @return map-get($colors, $search);
+}
+strong{
+  color: color("importante");
+}
+h3{
+  font-size:1.25rem;
+  }
+
+$font-family-sans-serif: 'Ubuntu', sans-serif !default;
+
+
+
+@import "node_modules/bootstrap/scss/bootstrap";

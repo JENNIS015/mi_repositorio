@@ -1,0 +1,220 @@
+@import "variables";
+
+.header{
+        padding-bottom:80px;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        
+        &__container h1 {
+            color: white;
+            font-weight: 600;
+            font-size:2.5rem;
+            margin-top:0;
+            margin-bottom:15px;
+            line-height:1.4;
+        }
+        &__link,&__link  a{ 
+            color: white;  
+            
+            &:hover{
+            
+                color:white;
+            }
+        }
+     
+        &__ul {
+            padding:0;
+            list-style-type: none;
+        }
+         &__telefono {
+            transition: transform .2s;  
+            &:hover {
+                transform: scale(1.5); }
+             a{
+             color:white;
+             padding: 15px;
+             font-size: larger;
+            &:hover {
+                color:white;
+              }}}
+        &--portadaSucesiones{
+            background-image: url("../img/sucesiones.jpg");
+        }
+        &--portadaArea{
+            background-image: url("../img/areas.jpg");
+        }
+        &--portadaContacto{
+            background-image: url("../img/contacto.jpg");
+        }
+        &--portadaContratos{
+            background-image: url("../img/derecho-inmobiliario.jpg");
+        }
+        &--portadaFamilia{
+            background-image: url("../img/derecho-de-familia.jpg");
+        }
+        &--portadaNovedades{
+            background-image: url("../img/areas.jpg");
+        }
+        &--portadaQuienesSomos{
+            background-image: url("../img/quienesSomos.jpg");
+        }
+
+
+        
+        &--blue{
+            background:linear-gradient(135deg, #172a74, #21a9af);
+            padding-bottom:80px;
+
+                &__image img{
+                    width:100%;
+                    height:auto;
+                    max-height: 400px;
+                
+                }
+
+                &__container {
+                    margin-top:60px;
+                    text-align:left;
+           
+                h1 {
+                        color: $colorEspecial;
+                        font-weight: 600;
+                        font-size:2.5rem;
+                        margin-top:0;
+                        margin-bottom:15px;
+                        line-height:1.4;
+                    }
+                p {
+                        color:white;
+                        font-size:20px;
+                        margin-bottom:30px;
+                        font-weight:300;
+                     }
+                h3{
+                        color:white;
+                    }
+                }            
+                
+                .action-button, .action-button:not(.disabled):active {
+                    border:1px solid rgba(255,255,255,0.7);
+                    border-radius:40px;
+                    color:#ebeff1;
+                    box-shadow:none;
+                    text-shadow:none;
+                    padding:.3rem .8rem;
+                    background:transparent;
+                    transition:background-color 0.25s;
+                    outline:none;
+                }
+                .action-button:hover {
+                    color:#fff;
+                    background-color: $colorEspecial;
+                }
+        }
+}
+
+@media screen and (min-width: 992px){
+    .header{
+        &__telefono{
+            order:3;
+        }
+        &__link{
+            padding-left:1.2rem;
+            padding-right:1.2rem;
+            color:white;
+        }
+        &__link--item{
+            color: black !important;
+           li{
+               padding:10px;
+               &:hover{
+                   background-color: $colorEspecial;
+                   color:white;
+               }
+           }
+        
+        }
+        &__link,&__link {
+         a{ 
+            color: white;  
+            &:hover {
+            color:white;
+            text-decoration: none;
+          }
+        }
+        li {
+            padding: 7px;
+            } 
+        }
+        &__container h1 {
+            margin-top:80px;
+            margin-bottom:14px;
+            line-height:1.2;
+        }
+        &__collapse {
+            max-width: max-content;
+        }
+    }  
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .header {
+
+        padding:100px 0px;
+        background-color:$colorAzul;
+        background-image:unset;
+
+        &--blue{
+            background:linear-gradient(135deg, #172a74, #21a9af);
+            &__container {
+
+                margin-top:20px;
+                text-align:center;
+                }
+        }
+        &__brand{
+            margin-right: 0rem!important;
+        }
+        &__link {
+                padding:1px 0px;
+                .dropdown-menu.show{
+                background-color:transparent}
+        }
+        &__nav {
+            ul{
+                padding:10px 0px;
+                text-transform: uppercase;
+
+            }
+            li{
+                padding: 10px 0px;
+                &hover{
+                    background: $colorEspecial
+                }
+            }
+        }
+        .navbar {
+                position: fixed;
+                z-index: 1030; //this value is from variables.less -> @zindex-navbar-fixed
+                right: 0;
+                left: 0;   
+                border-radius: 0;
+                top: 0;
+                border-width: 0 0 1px;    
+            background-color: $colorAzul;
+        }
+        .navbar-collapse {
+                border-color:transparent;
+               margin:0;
+        }
+        &__container h1 {
+
+                font-weight: 600;
+                font-size: 1.5rem;
+        
+        }   
+    } 
+ }

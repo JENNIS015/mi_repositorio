@@ -1,0 +1,198 @@
+@import "variables";
+
+.secciones{
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    &__img--firmar{
+        background-image: url("../img/firmar.jpg");
+        
+    }
+    &__img--acuerdo{
+        background-image: url("../img/acuerdo.jpg");
+        order:2;
+        
+    }
+    &__colorEspecial {
+        background-color: $colorEspecial;
+        color:white;
+
+        ul{
+            list-style-image: url("https://img.icons8.com/fluent-systems-regular/18/ffffff/checkmark--v1.png");
+        }
+    }
+    &__colorAzul {
+        background-color: $colorAzul;
+        color:white 
+    }
+    &__404Found {
+      color:white;
+      text-align: center;
+      a{
+        color:white;
+        border:1px solid;
+      }
+      p {
+         font-size: 2em;
+         text-align: center;
+         font-weight: 100;
+       }
+       
+       h1 {
+         text-align: center;
+         font-size: 15em;
+         font-weight: 100;
+        
+       }
+       
+     }
+    
+    &__centrado{
+        text-align: center;   
+    }
+    &__destacadas{
+    margin: 40px 0px;
+    text-align: center;
+
+    h1 {
+        margin-bottom: 40px;
+      }
+    
+    img{
+        border-radius: 70%;
+        border: 1px solid #e7e2dc;
+        padding: 10px;
+        transition: transform .2s; 
+          
+        &:hover {
+            transform: scale(1.1);    
+           }
+        
+    }}
+
+}
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
+.header--blue__encabezado{
+.btn {
+    width: 180px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid $colorAzul;
+    outline: none;
+    color: white;
+    transition: 1s ease-in-out;
+  }
+  
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
+  
+  .btn:hover {
+    transition: 1s ease-in-out;
+    background: $colorEspecial
+  }
+  
+  .btn:hover svg {
+    stroke-dashoffset: -480;
+  }
+  
+  .btn span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+  }
+}
+
+
+
+
+ul ul{
+    list-style-type: none;
+    padding-left: 0px;
+  }
+
+  aside{
+    background: #f7f7f7;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1.0rem;
+    border: 1px solid #e8e8e8;
+  }
+  aside a:hover{
+  color: black !important;
+  }
+  
+.quienesSomos{
+  &__contenedor{
+    align-items: baseline;
+  }
+  &__whois {
+    padding:$cien;
+    h1{
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 1.6rem;
+      }
+    p{
+      font-size: 1.2rem;
+      width: 60%;
+    }
+    hr{
+      background: $colorEspecial;
+      width: $cien;
+      height: 15px;
+      border: none;
+      margin-left: 0;
+    }
+  }
+    &__color {
+      padding:$cien/2;
+      background-color: $colorEspecial;
+      p{
+        color: white;
+        font-size: 1.1rem;
+      }
+ }
+}
+.areaPractica{
+  &__seccion{
+      padding-top :calc(8% - 2px ); 
+      padding-bottom :calc(10% - 2px ); 
+  }
+}
+@media (max-width:576px) {
+    .secciones{
+      &__img--firmar, &__img--acuerdo{
+      height: 300px;
+      order: 1;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }}
+    .quienesSomos{
+      &__whois {
+      padding:$cien/2;
+    }}
+
+}
+@media (max-width:768px) {
+  .areaPractica{
+    &__seccion{
+      padding:1%; 
+      margin:auto;
+    }
+  }
+}
+
+
+

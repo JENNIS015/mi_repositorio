@@ -1,0 +1,36 @@
+@import "variables";
+
+
+.footerPrincipal{
+background: #195190;
+color: white;
+text-align: center;
+padding: calc((1em / 2) + 4px);
+
+    ul{
+    padding-left: 0px;
+    list-style: none;
+   }
+   a{
+       color: white;
+       &:hover{
+           color:$colorEspecial; 
+           font-weight: 600;
+       }
+   }
+   h5{
+       font-weight: 600;
+   }
+    &__logo img{
+        width: 80%;
+    }
+    &__derechos{
+     background:linear-gradient(135deg, #194f8f, #21a9af);
+    color: white;
+    text-align: center;
+    padding: 5px;
+   }
+    
+    
+}
+
