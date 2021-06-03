@@ -30,7 +30,7 @@
   .header--portadaSucesiones {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sucesiones.jpg"); }
   .header--portadaArea {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/areas.jpg"); }
+    background-color: #172a74; }
   .header--portadaContacto {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/contacto.jpg"); }
   .header--portadaContratos {
@@ -283,6 +283,32 @@ aside {
   padding-top: calc(8% - 2px);
   padding-bottom: calc(10% - 2px); }
 
+.areaPractica .card:hover .card-img-overlay {
+  background-color: rgba(6, 15, 130, 0.7);
+  transition: .5s ease; }
+
+.areaPractica .card-img-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: .5s ease; }
+
+.areaPractica p {
+  color: white;
+  font-size: 1.025rem; }
+
+.areaPractica .action-button {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 40px;
+  color: #ebeff1;
+  box-shadow: none;
+  text-shadow: none;
+  padding: .3rem .8rem;
+  background: transparent;
+  outline: none; }
+
+.areaPractica .action-button:hover {
+  color: #fff;
+  background-color: #172a74; }
+
 @media (max-width: 576px) {
   .secciones__img--firmar, .secciones__img--acuerdo {
     height: 300px;
@@ -300,20 +326,25 @@ aside {
 .footerPrincipal {
   background: #172a74;
   color: white;
-  text-align: center;
+  text-align: left;
   padding: calc((1em / 2) + 4px); }
   .footerPrincipal ul {
     padding-left: 0px;
-    list-style: none; }
+    list-style: none;
+    font-size: 0.9rem; }
+  .footerPrincipal p {
+    font-size: 0.9rem; }
   .footerPrincipal a {
     color: white; }
     .footerPrincipal a:hover {
       color: #ec593d;
       font-weight: 600; }
   .footerPrincipal h5, .footerPrincipal .h5 {
-    font-weight: 600; }
-  .footerPrincipal__logo img {
-    width: 80%; }
+    font-weight: bold;
+    font-size: 1rem; }
+  .footerPrincipal img {
+    width: 40%;
+    display: block; }
   .footerPrincipal__derechos {
     background: linear-gradient(135deg, #172a74, #21a9af);
     color: white;

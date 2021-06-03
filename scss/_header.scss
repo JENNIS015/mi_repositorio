@@ -50,11 +50,7 @@
             url("../img/sucesiones.jpg");
         }
         &--portadaArea{
-            background-image:
-            linear-gradient(
-              rgba(0, 0, 0, 0.5),
-              rgba(0, 0, 0, 0.5)
-            ), url("../img/areas.jpg");
+            background-color:$colorAzul;
         }
         &--portadaContacto{
             background-image:

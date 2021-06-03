@@ -4,12 +4,17 @@
 .footerPrincipal{
 background:$colorAzul;
 color: white;
-text-align: center;
+text-align: left;
 padding: calc((1em / 2) + 4px);
+
 
     ul{
     padding-left: 0px;
     list-style: none;
+    font-size: 0.9rem;
+   }
+   p{
+    font-size: 0.9rem;
    }
    a{
        color: white;
@@ -19,10 +24,12 @@ padding: calc((1em / 2) + 4px);
        }
    }
    h5{
-       font-weight: 600;
+       font-weight: bold;
+       font-size: 1rem;
    }
-    &__logo img{
-        width: 80%;
+     img{
+        width: 40%;
+        display: block;
     }
     &__derechos{
      background:linear-gradient(135deg, $colorAzul, #21a9af);
