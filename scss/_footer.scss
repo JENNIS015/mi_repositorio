@@ -2,7 +2,7 @@
 
 
 .footerPrincipal{
-background: #195190;
+background:$colorAzul;
 color: white;
 text-align: center;
 padding: calc((1em / 2) + 4px);
@@ -25,7 +25,7 @@ padding: calc((1em / 2) + 4px);
         width: 80%;
     }
     &__derechos{
-     background:linear-gradient(135deg, #194f8f, #21a9af);
+     background:linear-gradient(135deg, $colorAzul, #21a9af);
     color: white;
     text-align: center;
     padding: 5px;

@@ -10,6 +10,8 @@ $SpacesSizes: (
   10: 10px,
   20:20px,
   30:30px,
+  40:40px,
+  50:50px
 );
 $PaddingsType: (
   pa: padding,
@@ -47,14 +49,20 @@ $colors: (
   @return map-get($colors, $search);
 }
 strong{
-  color: color("importante");
+  color: $colorAzul;
+
 }
 h3{
   font-size:1.25rem;
   }
+$font-weight-bolder: bold !default;
+$headings-font-weight:  bold !default;
+$font-family-sans-serif: 'Libre Franklin', sans-serif!default;
 
-$font-family-sans-serif: 'Ubuntu', sans-serif !default;
-
+p{ font-size: 1.05rem;
+  font-weight:300;
+}
+$link-color:$colorAzul;
 
 
 @import "node_modules/bootstrap/scss/bootstrap";

@@ -49,15 +49,22 @@
      }
     
     &__centrado{
-        text-align: center;   
+        text-align: center;
+        .btn-dark{
+          padding:10px;
+          font-size: 1.2rem;
+        }
+
     }
     &__destacadas{
     margin: 40px 0px;
     text-align: center;
 
-    h1 {
-        margin-bottom: 40px;
-      }
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
     
     img{
         border-radius: 70%;
@@ -81,7 +88,7 @@
     width: 180px;
     cursor: pointer;
     background: transparent;
-    border: 1px solid $colorAzul;
+    border: 1px solid white;
     outline: none;
     color: white;
     transition: 1s ease-in-out;
@@ -100,7 +107,8 @@
   
   .btn:hover {
     transition: 1s ease-in-out;
-    background: $colorEspecial
+    background: $colorEspecial;
+    color:white;
   }
   
   .btn:hover svg {
@@ -128,10 +136,14 @@ ul ul{
     padding: 10px;
     font-size: 1.0rem;
     border: 1px solid #e8e8e8;
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+      background-color:$colorAzul;
+      &:hover{
+        color:white;
+      }
+    }
   }
-  aside a:hover{
-  color: black !important;
-  }
+ 
   
 .quienesSomos{
   &__contenedor{

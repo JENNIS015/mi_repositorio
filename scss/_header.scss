@@ -35,29 +35,61 @@
              color:white;
              padding: 15px;
              font-size: larger;
-            &:hover {
-                color:white;
-              }}}
+             &:hover {
+                color: #ec593d!important;
+                font-weight: 600;
+
+              }}
+            }
         &--portadaSucesiones{
-            background-image: url("../img/sucesiones.jpg");
+            background-image:
+            linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ),
+            url("../img/sucesiones.jpg");
         }
         &--portadaArea{
-            background-image: url("../img/areas.jpg");
+            background-image:
+            linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ), url("../img/areas.jpg");
         }
         &--portadaContacto{
-            background-image: url("../img/contacto.jpg");
+            background-image:
+            linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ), url("../img/contacto.jpg");
         }
         &--portadaContratos{
-            background-image: url("../img/derecho-inmobiliario.jpg");
+            background-image:
+            linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ), url("../img/derecho-inmobiliario.jpg");
         }
         &--portadaFamilia{
-            background-image: url("../img/derecho-de-familia.jpg");
+            background-image:
+            linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ),url("../img/derecho-de-familia.jpg");
         }
         &--portadaNovedades{
-            background-image: url("../img/areas.jpg");
+            background-image:  linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+              ),
+           url("../img/areas.jpg");
         }
         &--portadaQuienesSomos{
-            background-image: url("../img/quienesSomos.jpg");
+            background-image:
+            linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ), url("../img/quienesSomos.jpg");
         }
 
 
@@ -76,7 +108,11 @@
                 &__container {
                     margin-top:60px;
                     text-align:left;
-           
+
+                
+                .btn{
+                    font-size:1.125rem;
+                }
                 h1 {
                         color: $colorEspecial;
                         font-weight: 600;
@@ -104,8 +140,8 @@
                     text-shadow:none;
                     padding:.3rem .8rem;
                     background:transparent;
-                    transition:background-color 0.25s;
                     outline:none;
+
                 }
                 .action-button:hover {
                     color:#fff;
@@ -114,11 +150,20 @@
         }
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 991px){
     .header{
+
+        a, a.dropdown-toggle{
+            &:hover{
+                color:$colorEspecial; 
+                font-weight: 600;
+            }
+        }  
         &__telefono{
             order:3;
         }
+        .dropdown-menu{
+        min-width: 11rem;}
         &__link{
             padding-left:1.2rem;
             padding-right:1.2rem;
@@ -159,7 +204,7 @@
 
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991px) {
 
     .header {
 
@@ -168,7 +213,7 @@
         background-image:unset;
 
         &--blue{
-            background:linear-gradient(135deg, #172a74, #21a9af);
+            background:#172a74;
             &__container {
 
                 margin-top:20px;
