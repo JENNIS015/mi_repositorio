@@ -1,3 +1,12 @@
+.topBar {
+  background-color: #172a74;
+  padding: 7px;
+  text-align: right; }
+  .topBar a, .topBar span {
+    color: white; }
+  .topBar a:hover {
+    color: #ec593d; }
+
 .header {
   padding-bottom: 80px;
   background-repeat: no-repeat;
@@ -9,10 +18,12 @@
     margin-top: 0;
     margin-bottom: 15px;
     line-height: 1.4; }
-  .header__link, .header__link a {
-    color: white; }
-    .header__link:hover, .header__link a:hover {
-      color: white; }
+  .header__link a {
+    color: white;
+    font-weight: 400;
+    font-size: large; }
+    .header__link a:hover {
+      color: #ec593d; }
   .header__ul {
     padding: 0;
     list-style-type: none; }
@@ -21,7 +32,6 @@
     .header__telefono:hover {
       transform: scale(1.5); }
     .header__telefono a {
-      color: white;
       padding: 15px;
       font-size: larger; }
       .header__telefono a:hover {
@@ -30,7 +40,7 @@
   .header--portadaSucesiones {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sucesiones.jpg"); }
   .header--portadaArea {
-    background-color: #172a74; }
+    background: linear-gradient(135deg, #172a74, #21a9af); }
   .header--portadaContacto {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/contacto.jpg"); }
   .header--portadaContratos {
@@ -42,8 +52,9 @@
   .header--portadaQuienesSomos {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/quienesSomos.jpg"); }
   .header--blue {
-    background: linear-gradient(135deg, #172a74, #21a9af);
-    padding-bottom: 80px; }
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(23, 42, 116, 0.8)), url("../img/home.jpg");
+    padding-bottom: 120px;
+    /* steps is number of chars-1 */ }
     .header--blue__image img {
       width: 100%;
       height: auto;
@@ -59,7 +70,8 @@
         font-size: 2.5rem;
         margin-top: 0;
         margin-bottom: 15px;
-        line-height: 1.4; }
+        line-height: 1.4;
+        position: relative; }
       .header--blue__container p {
         color: white;
         font-size: 20px;
@@ -79,19 +91,87 @@
     .header--blue .action-button:hover {
       color: #fff;
       background-color: #ec593d; }
+    .header--blue .span {
+      color: #000;
+      -webkit-transition: all .35s;
+      -moz-transition: all .35s;
+      transition: all .35s;
+      background-size: 0 100%;
+      background-repeat: no-repeat;
+      -webkit-transition: background-size .4s ease;
+      transition: background-size .4s ease; }
+    .header--blue .text-typing, .header--blue .text-nowrap {
+      white-space: nowrap;
+      display: block; }
+    .header--blue .typing-words span {
+      text-indent: 50px;
+      position: absolute;
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 1.75rem;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-left: -50px;
+      color: white;
+      visibility: hidden;
+      border-right: 4px solid transparent;
+      max-width: 32rem;
+      /* width of widest string */ }
+    .header--blue .typing-words span:nth-child(1) {
+      animation: typing 0.7s steps(5), typingReverse 0.7s steps(5) 0.7s, blink-wait 1s step-end 1 1.4s, blink-caret 0.6s step-end infinite; }
+    .header--blue .typing-words span:nth-child(2) {
+      animation: typing 0.7s steps(5) 2.4s, typingReverse 0.7s steps(5) 3.1s, blink-wait 1s step-end 1 4.8s, blink-caret 0.6s step-end infinite; }
+    .header--blue .typing-words span:nth-child(3) {
+      animation: blink-caret 0.6s step-end 7 8.5s, typing 1s steps(7) 4.2s forwards; }
+
+@keyframes typing {
+  from {
+    width: 0;
+    visibility: hidden; }
+  to {
+    width: 100%;
+    visibility: visible;
+    color: white; } }
+
+@keyframes typingReverse {
+  from {
+    width: 100%;
+    visibility: visible;
+    color: white; }
+  to {
+    width: 0; } }
+
+@keyframes blink-wait {
+  from, to {
+    width: 0;
+    visibility: hidden; }
+  30%, 60% {
+    width: 45px;
+    visibility: visible; } }
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent; }
+  50% {
+    border-color: #999; } }
 
 @media screen and (min-width: 991px) {
   .header a:hover, .header a.dropdown-toggle:hover {
     color: #ec593d;
-    font-weight: 600; }
+    font-weight: 400; }
   .header__telefono {
-    order: 3; }
+    display: none; }
+  .header__brandMobile {
+    display: none; }
   .header .dropdown-menu {
-    min-width: 11rem; }
+    padding: 0px;
+    width: 200px;
+    margin: 0px; }
   .header__link {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
-    color: white; }
+    color: white;
+    font-size: large; }
   .header__link--item {
     color: black !important; }
     .header__link--item li {
@@ -99,19 +179,31 @@
       .header__link--item li:hover {
         background-color: #ec593d;
         color: white; }
-  .header__link a, .header__link a {
-    color: white; }
-    .header__link a:hover, .header__link a:hover {
-      color: white;
+  .header--item a {
+    color: #000; }
+    .header--item a:hover {
+      color: black;
       text-decoration: none; }
-  .header__link li, .header__link li {
+  .header--item li {
     padding: 7px; }
   .header__container h1, .header__container .h1 {
     margin-top: 60px;
     margin-bottom: 14px;
     line-height: 1.2; }
   .header__collapse {
-    max-width: max-content; } }
+    max-width: max-content; }
+  .header--blue .navbar {
+    background-color: #ffffff4d; }
+  .header--blue .header__link a {
+    color: black; }
+    .header--blue .header__link a:hover {
+      color: white;
+      text-decoration: none; }
+  .header--blue .header__link {
+    color: black;
+    font-size: large; }
+  .header--blue h3, .header--blue .h3 {
+    display: none; } }
 
 @media only screen and (max-width: 991px) {
   .header {
@@ -123,8 +215,10 @@
       .header--blue__container {
         margin-top: 20px;
         text-align: center; }
-    .header__brand {
+    .header__brandMobile {
       margin-right: 0rem !important; }
+    .header__brandDesktop {
+      display: none; }
     .header__link {
       padding: 1px 0px; }
       .header__link .dropdown-menu.show {
@@ -136,6 +230,9 @@
       padding: 10px 0px; }
       .header__nav lihover {
         background: #ec593d; }
+    .header__nav a {
+      color: white;
+      font-size: large; }
     .header .navbar {
       position: fixed;
       z-index: 1030;
@@ -148,6 +245,8 @@
     .header .navbar-collapse {
       border-color: transparent;
       margin: 0; }
+    .header .typing-words {
+      display: none; }
     .header__container h1, .header__container .h1 {
       font-weight: 600;
       font-size: 1.5rem;
@@ -287,15 +386,14 @@ p {
   .quienesSomos__whois hr {
     background: #ec593d;
     width: 100px;
-    height: 15px;
-    border: none;
+    height: 15px !important;
+    opacity: 1;
     margin-left: 0; }
 
 .quienesSomos__color {
-  padding: 50px;
-  background-color: #ec593d; }
+  padding: 50px; }
   .quienesSomos__color p {
-    color: white;
+    color: black;
     font-size: 1.1rem; }
 
 .contacto__form .btn-primary {
@@ -306,7 +404,7 @@ p {
   padding-bottom: calc(10% - 2px); }
 
 .areaPractica .card:hover .card-img-overlay {
-  background-color: rgba(6, 15, 130, 0.7);
+  background-color: rgba(23, 42, 116, 0.53);
   transition: .5s ease; }
 
 .areaPractica .card-img-overlay {
