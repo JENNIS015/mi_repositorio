@@ -53,8 +53,7 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/quienesSomos.jpg"); }
   .header--blue {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(23, 42, 116, 0.8)), url("../img/home.jpg");
-    padding-bottom: 120px;
-    /* steps is number of chars-1 */ }
+    padding-bottom: 120px; }
     .header--blue__image img {
       width: 100%;
       height: auto;
@@ -115,8 +114,7 @@
       color: white;
       visibility: hidden;
       border-right: 4px solid transparent;
-      max-width: 32rem;
-      /* width of widest string */ }
+      max-width: 32rem; }
     .header--blue .typing-words span:nth-child(1) {
       animation: typing 0.7s steps(5), typingReverse 0.7s steps(5) 0.7s, blink-wait 1s step-end 1 1.4s, blink-caret 0.6s step-end infinite; }
     .header--blue .typing-words span:nth-child(2) {
@@ -283,6 +281,8 @@
       text-align: center;
       font-size: 15em;
       font-weight: 100; }
+    .secciones__404Found .btn {
+      background-color: #172a74; }
   .secciones__centrado {
     text-align: center; }
     .secciones__centrado .btn-dark {
@@ -435,6 +435,10 @@ p {
     order: 1;
     background-repeat: no-repeat;
     background-size: cover; }
+  .secciones__404Found {
+    height: 100vh; }
+    .secciones__404Found h1, .secciones__404Found .h1 {
+      font-size: 10em; }
   .quienesSomos__whois {
     padding: 60px; }
     .quienesSomos__whois p {
