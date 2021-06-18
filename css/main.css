@@ -198,7 +198,8 @@
   .header--blue .header__link a {
     color: black; }
     .header--blue .header__link a:hover {
-      color: white;
+      color: #ec593d;
+      font-weight: 600;
       text-decoration: none; }
   .header--blue .header__link {
     color: black;
