@@ -133,3 +133,4 @@ dist
 *.scss.map
 scss/
 
+.htaccess

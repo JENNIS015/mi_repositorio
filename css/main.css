@@ -249,7 +249,9 @@
       font-weight: 600;
       font-size: 1.5rem;
       margin-top: 50px;
-      text-align: center; } }
+      text-align: center; }
+    .header a:hover {
+      color: #ec593d; } }
 
 .secciones {
   background-repeat: no-repeat;
