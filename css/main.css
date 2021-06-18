@@ -158,7 +158,7 @@
 @media screen and (min-width: 991px) {
   .header a:hover, .header a.dropdown-toggle:hover {
     color: #ec593d;
-    font-weight: 400; }
+    font-weight: 600; }
   .header__telefono {
     display: none; }
   .header__brandMobile {
